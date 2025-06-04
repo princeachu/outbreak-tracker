@@ -19,6 +19,13 @@ import kagglehub
 # Download latest version
 path = kagglehub.dataset_download("imdevskp/corona-virus-report")
 
-print("Path to dataset files:", path)
+df = pd.read_csv('C:/projects/disease-outbreak-tracker/disease-outbreak-tracker/data/raw/covid_19_clean_complete.csv')
+df.head()
+
+# General Info About data
+df.info()
+df.describe()
+
+print(df.describe())
 
 warnings.filterwarnings('ignore')
